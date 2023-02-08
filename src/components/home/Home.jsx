@@ -1,6 +1,6 @@
 import React from "react"
 import Hero from "./hero/Hero"
-// import AboutCard from "../about/AboutCard"
+import AboutCard from "../about/AboutCard"
 // import Hblog from "./Hblog"
 // import HAbout from "./HAbout"
 // import Hprice from "./Hprice"
@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <>
       <Hero />
-      {/* <AboutCard />
-      <HAbout />
+      <AboutCard />
+      {/* <HAbout />
       <Testimonal />
       <Hblog />
       <Hprice /> */}
