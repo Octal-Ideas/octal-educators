@@ -2,7 +2,7 @@ import React from "react"
 import Hero from "./hero/Hero"
 import AboutCard from "../about/AboutCard"
 // import Hblog from "./Hblog"
-// import HAbout from "./HAbout"
+import HAbout from "./HAbout"
 // import Hprice from "./Hprice"
 // import Testimonal from "./testimonal/Testimonal"
 
@@ -11,10 +11,10 @@ const Home = () => {
     <>
       <Hero />
       <AboutCard />
-      {/* <HAbout />
-      <Testimonal />
-      <Hblog />
-      <Hprice /> */}
+      <HAbout />
+      {/* <Testimonal /> */}
+      {/* <Hblog /> */}
+      {/* <Hprice />  */}
     </>
   )
 }
