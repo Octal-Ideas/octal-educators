@@ -19,17 +19,17 @@ function App() {
     //   <Footer />
     // </>
     <>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route exact path="/about" element={<About/>} />
-          <Route exact path="/courses" element={<CourseHome/>} />
-          <Route exact path="/team" element={<Team/>} />
-          <Route exact path="/pricing" element={<Pricing/>} />
-          <Route exact path="/journal" element={<Blog/>} />
-          <Route exact path="/contact" element={<Contact/>} />
-        </Routes>
-        <Footer />
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/courses" element={<CourseHome />} />
+        <Route exact path="/team" element={<Team />} />
+        <Route exact path="/pricing" element={<Pricing />} />
+        <Route exact path="/journal" element={<Blog />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
