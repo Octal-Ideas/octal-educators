@@ -9,6 +9,7 @@
 }
 .logo img {
   height: 101px;
+  transform: scale(2);
 }
 .head .icon {
   margin-left: 10px;

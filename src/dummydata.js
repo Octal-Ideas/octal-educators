@@ -3,19 +3,19 @@ export const homeAbout = [
     id: 1,
     cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
     title: "Online Courses",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Our flexible curriculum covers multiple languages and features hands-on, project-based learning. Enroll now for an accessible and affordable path to a tech-powered future",
   },
   {
     id: 2,
     cover: "https://img.icons8.com/ios/80/000000/diploma.png",
-    title: "Earn A Certificates",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Earn A Certificate",
+    desc: "Showcase your skills with assessments and projects. A recognized credential in the tech industry.",
   },
   {
     id: 3,
     cover: "https://img.icons8.com/ios/80/000000/athlete.png",
     title: "Learn with Expert",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: " Our seasoned professionals bring a wealth of knowledge and experience to the classroom, delivering a hands-on, project-based curriculum designed to help you succeed.",
   },
 ];
 export const awrapper = [
@@ -323,59 +323,60 @@ export const team = [
 export const price = [
   {
     id: 1,
-    name: "BASIC PLAN",
+    name: "DATA SCIENCE ONLINE",
     price: "49K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Online classes offer flexible, self-paced learning with live instruction and online resources. Learn from anywhere, at your own pace, with our online classes.",
   },
   {
     id: 2,
-    name: "BEGINNER PLAN",
+    name: "DATA SCIENCE IN-PERSON",
     price: "79K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Physical classes provide structured in-person learning with expert instructors, hands-on learning, and personalized instruction. Achieve your goals in Data Science with the support you need.",
   },
   {
     id: 3,
-    name: "PREMIUM PLAN",
+    name: "SOFTWARE ENGINEERING ONLINE",
     price: "109k",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Online classes offer flexible, self-paced learning with live instruction and online resources. Learn from anywhere, at your own pace, with our online classes.",
   },
   {
     id: 4,
-    name: "ULTIMATE PLAN",
+    name: "SOFTWARE ENGINEERING IN-PERSON",
     price: "149K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    desc: "Physical classes provide structured in-person learning with expert instructors, hands-on learning, and personalized instruction. Achieve your goals in software engineering with the support you need.",
   },
 ];
 export const faq = [
   {
     id: 1,
     title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    desc: "To enroll in our online courses, simply visit our website and select the course you're interested in. Click on the 'Enroll Now' button and fill out the enrollment form with your personal and payment information. Once your enrollment is processed, you will receive an email with instructions on how to access your course materials and start learning. If you have any questions or need assistance, our support team is always available to help.",
   },
   {
     id: 2,
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "What is the difference between the physical and online classes?",
+    desc: "Physical classes offer a traditional, in-person learning experience with experienced instructors and hands-on opportunities. Online classes are flexible and self-paced, providing live instruction and online resources. Both options cater to different learning preferences and offer the same curriculum.",
   },
   {
     id: 3,
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title:
+      "What are the prerequisites for enrolling in the software engineering and data science courses?",
+    desc: "For enrolling in the Data Science course, you need to have prior coding experience in a programming language like Python or R. Basic knowledge of statistical methods and linear algebra is also recommended.To enroll in our software engineering course, there are no specific prerequisites required.",
   },
   {
     id: 4,
-    title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "Are there any discounts or scholarships available?",
+    desc: "Occasionally, scholarships are offered to eligible students. Stay updated on our website and social media pages to learn about any current opportunities",
   },
   {
     id: 5,
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "What is the class schedule for the physical classes?",
+    desc: "The class schedule for the physical classes is 8 hours a day, 5 days a week. The exact timing and duration of each class may vary depending on the specific course you enroll in. Please check with our enrollment team for more information on the class schedule for your chosen course.",
   },
   {
     id: 6,
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+    title: "Can I switch from physical to online classes or vice versa?",
+    desc: "Yes, you can switch from physical to online classes or vice versa. Please contact our support team for assistance in making the switch. They will help guide you through the process and answer any questions you may have",
   },
 ];
 export const blog = [
@@ -384,8 +385,8 @@ export const blog = [
     type: "admin",
     date: "JAN. 18, 2021",
     com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "Breaking Down Big Data: An Introduction to Data Science",
+    desc: " This blog will provide a comprehensive overview of the field of data science and help readers understand what big data is, what data scientists do, and how they can apply these skills to their careers.",
     cover: "../images/blog/b1.webp",
   },
   {
@@ -393,8 +394,9 @@ export const blog = [
     type: "admin",
     date: "API. 25, 2022",
     com: "5 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title:
+      "The Future of Software Engineering: The Rise of Artificial Intelligence",
+    desc: "This blog will explore the latest trends and innovations in software engineering, including the role of artificial intelligence and how it is changing the way software is developed and used.",
     cover: "../images/blog/b2.webp",
   },
   {
@@ -402,8 +404,8 @@ export const blog = [
     type: "user",
     date: "MAY. 15, 2022",
     com: "10 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "Mastering the Fundamentals of Coding: Tips for Success",
+    desc: "This blog will provide tips and strategies for mastering the fundamentals of coding, from selecting the right programming language to developing good coding habits.",
     cover: "../images/blog/b3.webp",
   },
   {
@@ -411,8 +413,8 @@ export const blog = [
     type: "admin",
     date: "JAN. 02, 2022",
     com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "The Importance of Networking in the Tech Industry",
+    desc: "This blog will explore the importance of networking in the tech industry, including the benefits of attending industry events, reaching out to mentors, and building professional relationships with others in the field..",
     cover: "../images/blog/b4.webp",
   },
   {
@@ -420,8 +422,8 @@ export const blog = [
     type: "admin",
     date: "DEC. 14, 2022",
     com: "3 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "The Importance of Software Engineering in Today's Digital Worldr",
+    desc: "This blog will explore the critical role that software engineering plays in shaping the world we live in, and why it's such a vital discipline in today's digital landscape.",
     cover: "../images/blog/b5.webp",
   },
   {
@@ -429,31 +431,31 @@ export const blog = [
     type: "user",
     date: "JAN. 18, 2021",
     com: "12 COMMENTS ",
-    title: "Build your Dream Software & Engineering Career",
-    desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+    title: "Breaking Down the Barriers to Success in Software Engineering",
+    desc: "This blog will provide insight into the common challenges that aspiring software engineers face, and offer practical advice on how to overcome these obstacles and achieve success in your chosen field",
     cover: "../images/blog/b6.webp",
   },
 ];
 export const testimonal = [
   {
     id: 1,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "JOHN ODHIAMBO",
+    post: "FULL-STACK WEB DEVELOPER",
+    desc: "Thanks to Octal's program, I landed my dream job. Expert instructors and hands-on projects provided the skills and confidence I needed",
     cover: "./images/testo/t1.webp",
   },
   {
     id: 2,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "DAVID KARIUKI",
+    post: "SOFTWARE ENGINEER",
+    desc: "Enrolling in the program was the best career move I made. I now have a higher salary and more opportunities in a new role.",
     cover: "./images/testo/t2.webp",
   },
   {
     id: 3,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    name: "MARY NDUTA",
+    post: "LEAD DEVELOPER",
+    desc: "Learning to code changed my life. I have the tools to tackle new challenges and pursue my passions. Highly recommended",
     cover: "./images/testo/t3.webp",
   },
 ];
