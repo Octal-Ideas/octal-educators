@@ -1,5 +1,7 @@
 import React from "react";
 import Heading from "../../common/heading/Heading";
+import { Link } from "react-router-dom";
+
 import "./Hero.css";
 
 const Hero = () => {
@@ -18,12 +20,17 @@ const Hero = () => {
               imagined.
             </p>
             <div className="button">
-              <button className="primary-btn">
-                GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i>
-              </button>
-              <button>
-                VIEW COURSE <i className="fa fa-long-arrow-alt-right"></i>
-              </button>
+              <Link to="/contact">
+                <button className="primary-btn">
+                  GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i>
+                </button>
+              </Link>
+              <Link to="/pricing">
+                {" "}
+                <button>
+                  VIEW COURSE <i className="fa fa-long-arrow-alt-right"></i>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

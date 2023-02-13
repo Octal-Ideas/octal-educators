@@ -11,16 +11,16 @@ const Head = () => {
           </div>
 
           <div className="social">
-            <a href="#">
+            <a href="facebook.com">
               <i className="fab fa-facebook-f icon"></i>
             </a>
-            <a href="#">
+            <a href="instagram.com">
               <i className="fab fa-instagram icon"></i>
             </a>
-            <a href="#">
+            <a href="twitter.com">
               <i className="fab fa-twitter icon"></i>
             </a>
-            <a href="#">
+            <a href="youtube.com">
               <i className="fab fa-youtube icon"></i>
             </a>
           </div>
