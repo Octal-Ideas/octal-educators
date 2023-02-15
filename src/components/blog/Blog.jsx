@@ -1,19 +1,18 @@
-import React from "react"
-import Back from "../common/back/Back"
-import BlogCard from "./BlogCard"
-import "./blog.css"
+import React from "react";
+import Back from "../common/back/Back";
+import "./blog.css";
+import { useParams } from "react-router-dom";
 
 const Blog = () => {
+  let { id } = useParams();
   return (
     <>
-      <Back title='Blog Posts' />
-      <section className='blog padding'>
-        <div className='container grid2'>
-          <BlogCard />
-        </div>
+      <Back title="Blog" />
+      <section className="blog padding">
+        <div className="container grid2">Hello World + {id}</div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

@@ -1,5 +1,6 @@
-import React from "react"
-import { blog } from "../../dummydata"
+import React from "react";
+import { blog } from "../../dummydata";
+import { Link } from "react-router-dom";
 
 const BlogCard = () => {
   return (
@@ -24,13 +25,16 @@ const BlogCard = () => {
                 <label htmlFor="">{val.com}</label>
               </span>
             </div>
-            <h1>{val.title}</h1>
+            <Link to={`/blog/${val.id}`}>
+              <h1>{val.title}</h1>
+            </Link>
+
             <p>{val.desc}</p>
           </div>
         </div>
       ))}
     </>
   );
-}
+};
 
-export default BlogCard
+export default BlogCard;

@@ -2,6 +2,7 @@ import React from "react";
 import "../blog/blog.css";
 import { blog } from "../../dummydata";
 import Heading from "../common/heading/Heading";
+import { Link } from "react-router-dom";
 
 // copy code of blog => blogCard
 
@@ -32,7 +33,9 @@ const Hblog = () => {
                       <label htmlFor="">{val.com}</label>
                     </span>
                   </div>
-                  <h1>{val.title}</h1>
+                  <Link to={`/blog/${val.id}`}>
+                    <h1>{val.title}</h1>
+                  </Link>
                   <p>{val.desc}</p>
                 </div>
               </div>
