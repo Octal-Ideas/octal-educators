@@ -4,7 +4,7 @@ import "./blog.css";
 import { useParams } from "react-router-dom";
 
 const Blog = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   return (
     <>
       <Back title="Blog" />
