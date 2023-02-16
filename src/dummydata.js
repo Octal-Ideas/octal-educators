@@ -1,3 +1,5 @@
+import { marked } from "marked";
+
 export const homeAbout = [
   {
     id: 1,
@@ -389,6 +391,7 @@ export const blog = [
     desc: " This blog will provide a comprehensive overview of the field of data science and help readers understand what big data is, what data scientists do, and how they can apply these skills to their careers.",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484732/school%20website%20Octal/p0fowjgselxx7pzep0x2.webp",
+    content: null, // Initialize the content to null
   },
   {
     id: 2,
@@ -400,6 +403,7 @@ export const blog = [
     desc: "This blog will explore the latest trends and innovations in software engineering, including the role of artificial intelligence and how it is changing the way software is developed and used.",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/fubi26okvmau2ycisbbj.webp",
+    content: null, // Initialize the content to null
   },
   {
     id: 3,
@@ -410,6 +414,7 @@ export const blog = [
     desc: "This blog will provide tips and strategies for mastering the fundamentals of coding, from selecting the right programming language to developing good coding habits.",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/dblri9wsjup64bufieex.webp",
+    content: null, // Initialize the content to null
   },
   {
     id: 4,
@@ -420,6 +425,7 @@ export const blog = [
     desc: "This blog will explore the importance of networking in the tech industry, including the benefits of attending industry events, reaching out to mentors, and building professional relationships with others in the field..",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/gtygmiixrawc4mbziyay.webp",
+    content: null, // Initialize the content to null
   },
   {
     id: 5,
@@ -430,6 +436,7 @@ export const blog = [
     desc: "This blog will explore the critical role that software engineering plays in shaping the world we live in, and why it's such a vital discipline in today's digital landscape.",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/hcox78jdhu9a8xlqsddc.webp",
+    content: null, // Initialize the content to null
   },
   {
     id: 6,
@@ -440,6 +447,7 @@ export const blog = [
     desc: "This blog will provide insight into the common challenges that aspiring software engineers face, and offer practical advice on how to overcome these obstacles and achieve success in your chosen field",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/vpepoym1vcuq4vmwo2ck.webp",
+    content: null, // Initialize the content to null
   },
 ];
 export const testimonal = [
@@ -465,3 +473,16 @@ export const testimonal = [
     cover: "./images/testo/t3.webp",
   },
 ];
+
+// Define a function to load the blog content from a markdown file
+async function loadBlogContent(id) {
+  const response = await fetch(`blog/blog-content-${id}.md`);
+  const markdown = await response.text();
+  return marked(markdown);
+}
+
+// Load the content for each blog entry
+for (let i = 0; i < blog.length; i++) {
+  const entry = blog[i];
+  entry.content = await loadBlogContent(entry.id);
+}
