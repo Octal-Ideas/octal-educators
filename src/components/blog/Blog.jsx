@@ -3,7 +3,6 @@ import Back from "../common/back/Back";
 import "./blog.css";
 import { useParams } from "react-router-dom";
 import { blog } from "../../dummydata";
-import ReactMarkdown from "react-markdown";
 
 const Blog = () => {
   // Get the blog ID from the URL
