@@ -1,6 +1,7 @@
 import React from "react";
 import { blog } from "../../../dummydata";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -34,21 +35,34 @@ const Footer = () => {
           <div className="box link">
             <h3>Explore</h3>
             <ul>
-              <li>About Us</li>
+              <Link to="/about">
+                <li>About Us</li>
+              </Link>
               <li>Services</li>
-              <li>Courses</li>
-              <li>Blog</li>
-              <li>Contact us</li>
+              <Link to="/courses">
+                <li>Courses</li>
+              </Link>
+              <Link to="/blogs">
+                <li>Blog</li>
+              </Link>
+              <Link to="/contact">
+                <li>Contact us</li>
+              </Link>
             </ul>
           </div>
           <div className="box link">
             <h3>Quick Links</h3>
             <ul>
               <li>Contact Us</li>
-              <li>Pricing</li>
+              <Link to="/pricing">
+                <li>Pricing</li>
+              </Link>
+
               <li>Terms & Conditions</li>
               <li>Privacy</li>
-              <li>Feedbacks</li>
+              <Link to="/">
+                <li>Feedbacks</li>
+              </Link>
             </ul>
           </div>
           <div className="box">
@@ -67,7 +81,9 @@ const Footer = () => {
                     <i className="fa fa-user"></i>
                     <label htmlFor="">{val.type}</label>
                   </span>
-                  <h4>{val.title.slice(0, 40)}...</h4>
+                  <Link to={`/blog/${val.id}`}>
+                    <h4>{val.title.slice(0, 40)}...</h4>
+                  </Link>
                 </div>
               </div>
             ))}
