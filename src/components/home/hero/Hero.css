@@ -11,6 +11,8 @@
   padding-top: 20%;
   padding-right: 50px;
   color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .hero #heading h3 {
   color: #fff;

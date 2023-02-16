@@ -1,3 +1,6 @@
+.price{
+  position: relative;
+}
 .price .items {
   padding: 40px !important;
   text-align: center;

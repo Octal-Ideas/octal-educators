@@ -27,7 +27,7 @@ const CoursesCard = () => {
                   </div>
                   <div className="details">
                     {val.courTeacher.map((details) => (
-                      <>
+                      <div key={details.id}>
                         <div className="box">
                           <div className="dimg">
                             <img src={details.dcover} alt="" />
@@ -37,7 +37,7 @@ const CoursesCard = () => {
                           </div>
                         </div>
                         <span>{details.totalTime}</span>
-                      </>
+                      </div>
                     ))}
                   </div>
                 </div>
