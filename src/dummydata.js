@@ -387,7 +387,8 @@ export const blog = [
     com: "3 COMMENTS ",
     title: "Breaking Down Big Data: An Introduction to Data Science",
     desc: " This blog will provide a comprehensive overview of the field of data science and help readers understand what big data is, what data scientists do, and how they can apply these skills to their careers.",
-    cover: "../images/blog/b1.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484732/school%20website%20Octal/p0fowjgselxx7pzep0x2.webp",
   },
   {
     id: 2,
@@ -397,7 +398,8 @@ export const blog = [
     title:
       "The Future of Software Engineering: The Rise of Artificial Intelligence",
     desc: "This blog will explore the latest trends and innovations in software engineering, including the role of artificial intelligence and how it is changing the way software is developed and used.",
-    cover: "../images/blog/b2.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/fubi26okvmau2ycisbbj.webp",
   },
   {
     id: 3,
@@ -406,7 +408,8 @@ export const blog = [
     com: "10 COMMENTS ",
     title: "Mastering the Fundamentals of Coding: Tips for Success",
     desc: "This blog will provide tips and strategies for mastering the fundamentals of coding, from selecting the right programming language to developing good coding habits.",
-    cover: "../images/blog/b3.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/dblri9wsjup64bufieex.webp",
   },
   {
     id: 4,
@@ -415,7 +418,8 @@ export const blog = [
     com: "3 COMMENTS ",
     title: "The Importance of Networking in the Tech Industry",
     desc: "This blog will explore the importance of networking in the tech industry, including the benefits of attending industry events, reaching out to mentors, and building professional relationships with others in the field..",
-    cover: "../images/blog/b4.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/gtygmiixrawc4mbziyay.webp",
   },
   {
     id: 5,
@@ -424,7 +428,8 @@ export const blog = [
     com: "3 COMMENTS ",
     title: "The Importance of Software Engineering in Today's Digital Worldr",
     desc: "This blog will explore the critical role that software engineering plays in shaping the world we live in, and why it's such a vital discipline in today's digital landscape.",
-    cover: "../images/blog/b5.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/hcox78jdhu9a8xlqsddc.webp",
   },
   {
     id: 6,
@@ -433,7 +438,8 @@ export const blog = [
     com: "12 COMMENTS ",
     title: "Breaking Down the Barriers to Success in Software Engineering",
     desc: "This blog will provide insight into the common challenges that aspiring software engineers face, and offer practical advice on how to overcome these obstacles and achieve success in your chosen field",
-    cover: "../images/blog/b6.webp",
+    cover:
+      "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/vpepoym1vcuq4vmwo2ck.webp",
   },
 ];
 export const testimonal = [
