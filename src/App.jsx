@@ -11,6 +11,7 @@ import Pricing from "./components/pricing/Pricing";
 import Blogs from "./components/blog/Blogs";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     // </>
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
