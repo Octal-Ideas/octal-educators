@@ -432,7 +432,7 @@ export const blog = [
     type: "admin",
     date: "DEC. 14, 2022",
     com: "3 COMMENTS ",
-    title: "The Importance of Software Engineering in Today's Digital Worldr",
+    title: "The Importance of Software Engineering in Today's Digital World",
     desc: "This blog will explore the critical role that software engineering plays in shaping the world we live in, and why it's such a vital discipline in today's digital landscape.",
     cover:
       "https://res.cloudinary.com/dny99bibe/image/upload/v1676484643/school%20website%20Octal/hcox78jdhu9a8xlqsddc.webp",
@@ -476,13 +476,21 @@ export const testimonal = [
 
 // Define a function to load the blog content from a markdown file
 async function loadBlogContent(id) {
-  const response = await fetch(`blog/blog-content-${id}.md`);
-  const markdown = await response.text();
-  return marked(markdown);
+  try {
+    const response = await fetch(`blog/blog-content-${id}.md`);
+    const markdown = await response.text();
+    return marked(markdown);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // Load the content for each blog entry
 for (let i = 0; i < blog.length; i++) {
   const entry = blog[i];
-  entry.content = await loadBlogContent(entry.id);
+  try {
+    entry.content = await loadBlogContent(entry.id);
+  } catch (err) {
+    console.error("An error occurred while loading the blog entry: ", err);
+  }
 }
