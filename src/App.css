@@ -6,6 +6,8 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f8f8f8;
+  position: relative;
+  
 }
 
 /*------------global-----------*/
@@ -104,22 +106,37 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
   width: 100%;
   height: 100vh;
   padding-top: 30%;
   padding-right: 50px;
   color: #fff;
   text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.back::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #2d294263;
 }
 .back h1 {
   font-size: 100px;
   font-weight: 400;
+  position: relative;
+  z-index: 40;
 }
 .back h2 {
   font-weight: 500;
   font-size: 17px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 40;
 }
 .margin {
   margin-top: 40.3%;
