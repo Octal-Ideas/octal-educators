@@ -1,6 +1,8 @@
 import React from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
+import "./emailjs.jsx";
+
 
 const Contact = () => {
   const map =
