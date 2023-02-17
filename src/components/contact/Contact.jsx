@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const map =
@@ -34,9 +32,13 @@ const Contact = () => {
       );
   };
 
-        //Notify Fuction Called when the send button is clicked
-          const notify = () => toast.info("Message Sent Successfully!");
-          
+  //Notify Fuction Called when the send button is clicked
+  const notify = () => toast.info("Message Sent Successfully!");
+
+  function handleClick() {
+    notify();
+  }
+
   return (
     <>
       <Back title="Contact us" />
@@ -64,20 +66,24 @@ const Contact = () => {
               </div>
             </div>
 
-            <ToastContainer/>
-            <form  ref={form} onSubmit={sendEmail}>
+            <ToastContainer />
+            <form ref={form} onSubmit={sendEmail}>
               <div className="flexSB">
-                <input type="text" placeholder="Name" name="user_name"/>
-                <input type="email" placeholder="Email" name="user_email"/>
+                <input type="text" placeholder="Name" name="user_name" />
+                <input type="email" placeholder="Email" name="user_email" />
               </div>
-              <input type="text" placeholder="Subject" name="subject"/>
+              <input type="text" placeholder="Subject" name="subject" />
               <textarea
                 cols="30"
                 rows="10"
                 placeholder="Create a message here..."
                 name="message"
               ></textarea>
-              <button className="primary-btn" type="submit" onClick={notify}>
+              <button
+                className="primary-btn"
+                type="submit"
+                onClick={handleClick}
+              >
                 SEND MESSAGE
               </button>
             </form>
