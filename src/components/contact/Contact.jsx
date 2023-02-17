@@ -68,7 +68,7 @@ const Contact = () => {
               <textarea
                 cols="30"
                 rows="10"
-                defaultValue="Create a message here..."
+                placeholder="Create a message here..."
                 name="message"
               ></textarea>
               <button className="primary-btn" type="submit">
