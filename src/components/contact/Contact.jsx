@@ -34,8 +34,9 @@ const Contact = () => {
       );
   };
 
-  //Notify Fuction Called when the send button is clicked
+        //Notify Fuction Called when the send button is clicked
           const notify = () => toast.info("Message Sent Successfully!");
+          
   return (
     <>
       <Back title="Contact us" />
