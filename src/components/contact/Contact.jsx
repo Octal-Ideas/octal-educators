@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
