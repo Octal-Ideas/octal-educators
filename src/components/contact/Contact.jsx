@@ -34,6 +34,8 @@ const Contact = () => {
       );
   };
 
+  //Notify Fuction Called when the send button is clicked
+          const notify = () => toast.info("Message Sent Successfully!");
   return (
     <>
       <Back title="Contact us" />
@@ -61,6 +63,7 @@ const Contact = () => {
               </div>
             </div>
 
+            <ToastContainer/>
             <form  ref={form} onSubmit={sendEmail}>
               <div className="flexSB">
                 <input type="text" placeholder="Name" name="user_name"/>
@@ -73,7 +76,7 @@ const Contact = () => {
                 placeholder="Create a message here..."
                 name="message"
               ></textarea>
-              <button className="primary-btn" type="submit">
+              <button className="primary-btn" type="submit" onClick={notify}>
                 SEND MESSAGE
               </button>
             </form>
