@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
@@ -11,6 +11,11 @@ const Contact = () => {
 
   const form = useRef();
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const[subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -18,13 +23,17 @@ const Contact = () => {
       .sendForm(
         "service_1vgzn7d",
         "template_39ia0rl",
-        form.current,
+        e.target,
         "kWA-pk8ZZM_g_-Q7h"
       )
       .then(
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
         },
         (error) => {
           console.log(error.text);
@@ -37,6 +46,7 @@ const Contact = () => {
 
   function handleClick() {
     notify();
+    // handleSubmit();
   }
 
   return (
@@ -69,15 +79,35 @@ const Contact = () => {
             <ToastContainer />
             <form ref={form} onSubmit={sendEmail}>
               <div className="flexSB">
-                <input type="text" placeholder="Name" name="user_name" />
-                <input type="email" placeholder="Email" name="user_email" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="user_name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="user_email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
-              <input type="text" placeholder="Subject" name="subject" />
+              <input
+                type="text"
+                placeholder="Subject"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
               <textarea
                 cols="30"
                 rows="10"
                 placeholder="Create a message here..."
                 name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
               <button
                 className="primary-btn"
