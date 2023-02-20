@@ -486,11 +486,16 @@ async function loadBlogContent(id) {
 }
 
 // Load the content for each blog entry
-for (let i = 0; i < blog.length; i++) {
-  const entry = blog[i];
-  try {
-    entry.content = await loadBlogContent(entry.id);
-  } catch (err) {
-    console.error("An error occurred while loading the blog entry: ", err);
+async function loadBlogData() {
+  for (let i = 0; i < blog.length; i++) {
+    const entry = blog[i];
+    try {
+      entry.content = await loadBlogContent(entry.id);
+    } catch (err) {
+      console.error("An error occurred while loading the blog entry: ", err);
+    }
   }
+
 }
+
+loadBlogData();
