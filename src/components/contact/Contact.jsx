@@ -1,10 +1,54 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const map =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8763994536293!2d36.88679511430506!3d-1.2450214359326062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f15ca7016992f%3A0x4b7f89640fb5e285!2sBega%20Kwa%20Bega!5e0!3m2!1sen!2ske!4v1676022392648!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ';
+
+  const form = useRef();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const[subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_1vgzn7d",
+        "template_39ia0rl",
+        e.target,
+        "kWA-pk8ZZM_g_-Q7h"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  //Notify Fuction Called when the send button is clicked
+  const notify = () => toast.info("Message Sent Successfully!");
+
+  function handleClick() {
+    notify();
+    // handleSubmit();
+  }
+
   return (
     <>
       <Back title="Contact us" />
@@ -32,18 +76,46 @@ const Contact = () => {
               </div>
             </div>
 
-            <form action="">
+            <ToastContainer />
+            <form ref={form} onSubmit={sendEmail}>
               <div className="flexSB">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="user_name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="user_email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
-              <input type="text" placeholder="Subject" />
+              <input
+                type="text"
+                placeholder="Subject"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
               <textarea
                 cols="30"
                 rows="10"
-                defaultValue="Create a message here..."
+                placeholder="Create a message here..."
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-              <button className="primary-btn">SEND MESSAGE</button>
+              <button
+                className="primary-btn"
+                type="submit"
+                onClick={handleClick}
+              >
+                SEND MESSAGE
+              </button>
             </form>
 
             <h3>Follow us here</h3>
