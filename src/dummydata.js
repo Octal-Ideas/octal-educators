@@ -499,6 +499,35 @@ export const testimonal = [
 
 // loadBlogData();
 
+// async function loadBlogContent(id) {
+//   try {
+//     const response = await fetch(`./blog/blog-content-${id}.md`);
+//     const markdown = await response.text();
+//     return marked(markdown);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+// async function loadBlogData() {
+//   for (let i = 0; i < blog.length; i++) {
+//     const entry = blog[i];
+//     try {
+//       let content = localStorage.getItem(`blog-${entry.id}`);
+//       if (!content) {
+//         content = await loadBlogContent(entry.id);
+//         localStorage.setItem(`blog-${entry.id}`, content);
+//       }
+//       entry.content = content;
+//     } catch (err) {
+//       console.error("An error occurred while loading the blog entry: ", err);
+//     }
+//   }
+// }
+
+// loadBlogData();
+
+
 async function loadBlogContent(id) {
   try {
     const response = await fetch(`./blog/blog-content-${id}.md`);
@@ -525,4 +554,4 @@ async function loadBlogData() {
   }
 }
 
-loadBlogData();
+loadBlogData().then(() => console.log(blog));
