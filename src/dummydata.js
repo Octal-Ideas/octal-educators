@@ -495,7 +495,6 @@ async function loadBlogData() {
       console.error("An error occurred while loading the blog entry: ", err);
     }
   }
-
 }
 
 loadBlogData();

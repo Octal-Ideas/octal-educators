@@ -8,7 +8,7 @@ const BlogCard = () => {
       {blog.map((val) => (
         <div className="items shadow" key={val.id}>
           <div className="img">
-            <img src={val.cover} alt="" />
+            <img src={val.cover} alt={val.title} />
           </div>
           <div className="text">
             <div className="admin flexSB">
