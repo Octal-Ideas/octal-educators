@@ -475,9 +475,33 @@ export const testimonal = [
 ];
 
 // Define a function to load the blog content from a markdown file
+// async function loadBlogContent(id) {
+//   try {
+//     const response = await fetch(`./blog/blog-content-${id}.md`);
+//     const markdown = await response.text();
+//     return marked(markdown);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+// Load the content for each blog entry
+// async function loadBlogData() {
+//   for (let i = 0; i < blog.length; i++) {
+//     const entry = blog[i];
+//     try {
+//       entry.content = await loadBlogContent(entry.id);
+//     } catch (err) {
+//       console.error("An error occurred while loading the blog entry: ", err);
+//     }
+//   }
+// }
+
+// loadBlogData();
+
 async function loadBlogContent(id) {
   try {
-    const response = await fetch(`blog/blog-content-${id}.md`);
+    const response = await fetch(`./blog/blog-content-${id}.md`);
     const markdown = await response.text();
     return marked(markdown);
   } catch (error) {
@@ -485,12 +509,16 @@ async function loadBlogContent(id) {
   }
 }
 
-// Load the content for each blog entry
 async function loadBlogData() {
   for (let i = 0; i < blog.length; i++) {
     const entry = blog[i];
     try {
-      entry.content = await loadBlogContent(entry.id);
+      let content = localStorage.getItem(`blog-${entry.id}`);
+      if (!content) {
+        content = await loadBlogContent(entry.id);
+        localStorage.setItem(`blog-${entry.id}`, content);
+      }
+      entry.content = content;
     } catch (err) {
       console.error("An error occurred while loading the blog entry: ", err);
     }
