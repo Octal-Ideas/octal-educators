@@ -17,6 +17,7 @@ function Form({ onAddBlog }) {
     caption: "",
     photographer: "",
     language: "",
+    category: "",
   });
   //get image
   const [file, setFile] = useState(null);
@@ -36,7 +37,7 @@ function Form({ onAddBlog }) {
     if (value != null && value.trim() !== "") {
       const formData = new FormData();
       formData.append("image", file);
-      formData.append("category", "category"); //edit
+      formData.append("category", input.category); //edit
       formData.append("title", input.title);
       formData.append("content", value);
       formData.append("language", input.language);
@@ -46,15 +47,16 @@ function Form({ onAddBlog }) {
       formData.append("author_id", 1);
       formData.append("user_id", 1);
 
+      console.log("formdata", ...formData);
       // fetch("http://localhost:9292/blogs", {
-        // method: "POST",
-        // headers: {
-        //   "Content-Type": "multipart/form-data",
-        // },
+      // method: "POST",
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      // },
       //   body: formData,
       // })
-        // .then((res) => res.json())
-        // .then((json) => onAddBlog(json));
+      // .then((res) => res.json())
+      // .then((json) => onAddBlog(json));
       const clearInputs = {
         author: "",
         title: "",
@@ -85,8 +87,10 @@ function Form({ onAddBlog }) {
       <Back title="" bgImage="" />
       <form onSubmit={handleOnSubmit} className={FormCSS.form}>
         <div className={FormCSS.buttons}>
-          <select>
-            <option>English</option>
+          <select value={input.language} onChange={handleOnChange}>
+            <option value="English">English</option>
+            <option value="Swahili">Swahili</option>
+            <option value="German">German</option>
           </select>
           <div>
             <button>Preview</button>
@@ -103,8 +107,15 @@ function Form({ onAddBlog }) {
               onChange={handleOnChange}
               label="author"
             />
-            <select id="category" name="categories" onChange={handleOnChange}>
-              <option value={input.category}>Categories</option>
+            <select
+              id="category"
+              name="categories"
+              onChange={handleOnChange}
+              value={input.category}
+            >
+              <option>Categories</option>
+              <option>one</option>
+              <option>two</option>
             </select>
             <Input
               id="title"
