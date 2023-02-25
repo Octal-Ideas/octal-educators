@@ -12,6 +12,7 @@ import Blogs from "./components/blog/Blogs";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/common/ScrollToTop";
+import SignUp from "./components/signup-login/Signup";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/journal" element={<Blogs />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/register" element={<SignUp />} />
       </Routes>
       <Footer />
     </>
