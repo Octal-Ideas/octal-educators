@@ -5,6 +5,10 @@
   position: relative;
   z-index: 40;
 }
+.container {
+  align-items: center;
+
+}
 .logo h1 {
   font-size: 35px;
   font-weight: 900;
@@ -81,5 +85,19 @@ header ul li a:hover {
     left: 0;
     width: 100%;
     background-color: var(--primary);
+  }
+  .container {
+    width: 60%;
+    align-items: center;
+  
+  }
+ 
+  .logo img{
+    height: 50%;
+    width: 50%;
+  }
+  .social{
+    display: flex;
+    justify-content: space-between;
   }
 }
