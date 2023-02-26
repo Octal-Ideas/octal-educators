@@ -1,18 +1,47 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import FormCSS from "./Form.module.css";
 import RichText from "./RichText";
 import Input from "./Input";
 import Back from "../common/back/Back";
+import DropDown from "./Select";
+import MultiSelect from "./MultiSelect";
+const categoryOptions = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+];
+
+const data = ["English", "Banana", "Orange"];
+const transformedData = data.map((item) => ({
+  value: item,
+  label: item,
+}));
 
 function Form({ onAddBlog }) {
   //set value from rich text
   const [value, setValue] = useState("");
+
+  //tags
+  const [tags, setTags] = useState([]);
+
+  //category
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  //language
+  const [languageOptions, setLanguageOptions] = useState([])
+  useEffect(() => {
+        setLanguageOptions(transformedData);
+  }, []);
+
+  const [language, setLanguage] = useState(languageOptions[0]);
+
+
+  console.log("forms selected option:", selectedOption);
   //initial value for inputs
   const [input, setInput] = useState({
     author: "",
     title: "",
     date: "",
-    tag: "",
     cover: "",
     caption: "",
     photographer: "",
@@ -21,6 +50,7 @@ function Form({ onAddBlog }) {
   });
   //get image
   const [file, setFile] = useState(null);
+
   //resetting the file input using useRef hook (controlled input)
   const imageInputRef = useRef();
 
@@ -28,6 +58,9 @@ function Form({ onAddBlog }) {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
+  // const handleTagChange =(selectedTags) =>{
+  //   setTags({...tags, selectedTags})
+  // }
   function handleImageChange(e) {
     setFile(e.target.files[0]);
     console.log(e.target.files[0]);
@@ -37,15 +70,24 @@ function Form({ onAddBlog }) {
     if (value != null && value.trim() !== "") {
       const formData = new FormData();
       formData.append("image", file);
-      formData.append("category", input.category); //edit
+      formData.append(
+        "category",
+        selectedOption.value
+      ); //edit
       formData.append("title", input.title);
       formData.append("content", value);
-      formData.append("language", input.language);
+      formData.append(
+        "language",
+        language.value
+      );
       formData.append("photographer", input.photographer);
       formData.append("caption", input.caption);
-      formData.append("tag", input.tag);
       formData.append("author_id", 1);
       formData.append("user_id", 1);
+      formData.append(
+        "tag",
+        tags.map((tag) => tag.value)
+      );
 
       console.log("formdata", ...formData);
       // fetch("http://localhost:9292/blogs", {
@@ -61,7 +103,6 @@ function Form({ onAddBlog }) {
         author: "",
         title: "",
         date: "",
-        tag: "",
         cover: "",
         caption: "",
         photographer: "",
@@ -69,6 +110,7 @@ function Form({ onAddBlog }) {
       };
       // const clearFile = null;
       setValue(""); //resets the value of the rich text editor
+      setTags([]); //resets the tags
       setInput(clearInputs); //resets author,title,tag,caption,photographer,and language
 
       //file resetting
@@ -87,11 +129,11 @@ function Form({ onAddBlog }) {
       <Back title="" bgImage="" />
       <form onSubmit={handleOnSubmit} className={FormCSS.form}>
         <div className={FormCSS.buttons}>
-          <select value={input.language} onChange={handleOnChange}>
-            <option value="English">English</option>
-            <option value="Swahili">Swahili</option>
-            <option value="German">German</option>
-          </select>
+          <DropDown
+            options={languageOptions}
+            selectedOption={language}
+            setSelectedOption={setLanguage}
+          />
           <div>
             <button>Preview</button>
             <button type="submit">Publish</button>
@@ -107,16 +149,11 @@ function Form({ onAddBlog }) {
               onChange={handleOnChange}
               label="author"
             />
-            <select
-              id="category"
-              name="categories"
-              onChange={handleOnChange}
-              value={input.category}
-            >
-              <option>Categories</option>
-              <option>one</option>
-              <option>two</option>
-            </select>
+            <DropDown
+              options={categoryOptions}
+              selectedOption={selectedOption}
+              setSelectedOption={setSelectedOption}
+            />
             <Input
               id="title"
               type="text"
@@ -126,14 +163,7 @@ function Form({ onAddBlog }) {
               label="title"
             />
             <RichText setValue={setValue} value={value} />
-            <Input
-              id="tag"
-              type="text"
-              name="tag"
-              value={input.tag}
-              onChange={handleOnChange}
-              label="tag"
-            />
+            <MultiSelect tags={tags} setTags={setTags} />
             <div className={FormCSS.imageUpload}>
               <div>
                 <label>Upload image</label>
