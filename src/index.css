@@ -9,6 +9,8 @@
 .jodit-toolbar__box:not(:empty):not(:empty) {
   background-color: var(--primary) !important;
   color: white;
+    border-radius: 5px !important;
+
 }
 
 /* .jodit-toolbar__box:not(:empty) {
@@ -66,10 +68,21 @@
 }
 
 .jodit-container:not(.jodit_inline) {
-    background-color: #0182d388 !important;;
+    background-color: #0182d388 !important;
+    border-radius: 5px !important;
 }
 
 .jodit-react-container{
   margin: 2rem 0;
 box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+}
+
+
+/**/
+.css-b62m3t-container {
+    max-width: 60% !important;
+}
+
+.css-13cymwt-control{
+  border-color: rgba(0, 0, 0, 0.5) !important;
 }

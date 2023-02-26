@@ -28,13 +28,12 @@ function Form({ onAddBlog }) {
   const [selectedOption, setSelectedOption] = useState(null);
 
   //language
-  const [languageOptions, setLanguageOptions] = useState([])
+  const [languageOptions, setLanguageOptions] = useState([]);
   useEffect(() => {
-        setLanguageOptions(transformedData);
+    setLanguageOptions(transformedData);
   }, []);
 
   const [language, setLanguage] = useState(languageOptions[0]);
-
 
   console.log("forms selected option:", selectedOption);
   //initial value for inputs
@@ -70,16 +69,10 @@ function Form({ onAddBlog }) {
     if (value != null && value.trim() !== "") {
       const formData = new FormData();
       formData.append("image", file);
-      formData.append(
-        "category",
-        selectedOption.value
-      ); //edit
+      formData.append("category", selectedOption.value); //edit
       formData.append("title", input.title);
       formData.append("content", value);
-      formData.append(
-        "language",
-        language.value
-      );
+      formData.append("language", language.value);
       formData.append("photographer", input.photographer);
       formData.append("caption", input.caption);
       formData.append("author_id", 1);
@@ -140,63 +133,61 @@ function Form({ onAddBlog }) {
           </div>
         </div>
         <div className={FormCSS.formContainer}>
-          <div>
-            <Input
-              id="author"
-              type="text"
-              name="author"
-              value={input.author}
-              onChange={handleOnChange}
-              label="author"
-            />
-            <DropDown
-              options={categoryOptions}
-              selectedOption={selectedOption}
-              setSelectedOption={setSelectedOption}
-            />
-            <Input
-              id="title"
-              type="text"
-              name="title"
-              value={input.title}
-              onChange={handleOnChange}
-              label="title"
-            />
-            <RichText setValue={setValue} value={value} />
-            <MultiSelect tags={tags} setTags={setTags} />
-            <div className={FormCSS.imageUpload}>
-              <div>
-                <label>Upload image</label>
-                <Input
-                  id="image"
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  value={input.file}
-                  onChange={handleImageChange}
-                  innerRef={imageInputRef} //apply the ref to the input,now its controlled
-                />
-              </div>
-              <div>
-                <label>Caption</label>
-                <Input
-                  id="caption"
-                  type="text"
-                  name="caption"
-                  value={input.caption}
-                  onChange={handleOnChange}
-                />
-              </div>
-              <div>
-                <label>Photographer</label>
-                <Input
-                  id="photographer"
-                  type="text"
-                  name="photographer"
-                  value={input.photographer}
-                  onChange={handleOnChange}
-                />
-              </div>
+          <Input
+            id="author"
+            type="text"
+            name="author"
+            value={input.author}
+            onChange={handleOnChange}
+            label="author"
+          />
+          <DropDown
+            options={categoryOptions}
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
+          <Input
+            id="title"
+            type="text"
+            name="title"
+            value={input.title}
+            onChange={handleOnChange}
+            label="title"
+          />
+          <RichText setValue={setValue} value={value} />
+          <MultiSelect tags={tags} setTags={setTags} />
+          <div className={FormCSS.imageUpload}>
+            <div>
+              <label>Upload image</label>
+              <Input
+                id="image"
+                type="file"
+                name="image"
+                accept="image/*"
+                value={input.file}
+                onChange={handleImageChange}
+                innerRef={imageInputRef} //apply the ref to the input,now its controlled
+              />
+            </div>
+            <div>
+              <label>Caption</label>
+              <Input
+                id="caption"
+                type="text"
+                name="caption"
+                value={input.caption}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div>
+              <label>Photographer</label>
+              <Input
+                id="photographer"
+                type="text"
+                name="photographer"
+                value={input.photographer}
+                onChange={handleOnChange}
+              />
             </div>
           </div>
         </div>

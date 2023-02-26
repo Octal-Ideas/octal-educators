@@ -37,7 +37,7 @@ const MultiSelect = ({ tags, setTags }) => {
       }}
       onInputChange={(newValue) => setInputValue(newValue)}
       onKeyDown={handleKeyDown}
-      placeholder="Type something and press enter..."
+      placeholder="Type tags and press enter..."
       value={tags}
     />
   );
