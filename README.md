@@ -18,15 +18,6 @@ Run npm run dev to start the development server.
 
 Open your browser and go to localhost:3000 to view the application.
 
-# BDD
-As a user:
-
-I want to be able to view the available IT courses on the website. 
-
-I want to be able to select and book a course of my choice.
-
-I want to be able to view my bookings and edit them if necessary.
-
 # Live Link
 https://octal-educators.vercel.app/
 
@@ -34,13 +25,11 @@ https://octal-educators.vercel.app/
 There are currently no known bugs in the project.
 
 # Technologies Used
-HTML
-
-CSS
-
-JavaScript
+React
 
 Vite
+
+Django
 
 # Support/Contact Details
 
