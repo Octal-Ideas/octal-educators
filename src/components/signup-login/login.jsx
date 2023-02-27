@@ -23,16 +23,18 @@ function LogIn() {
 
                     <h2 className="fw-bold mb-5">Log In now</h2>
 
-                    
 
-                    <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+
+                    <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email' />
                     <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password' />
 
-                    <div className='d-flex justify-content-center mb-4'>
-                        <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+                    <div className="d-flex justify-content-between mx-4 mb-4">
+                        <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                        <a href="!#">Forgot password?</a>
                     </div>
 
                     <MDBBtn className='w-100 mb-4' size='md' style={{ background: '#009dff' }}>Log In</MDBBtn>
+                    <p className="text-center">Not a member? <a href="/register">Register</a></p>
 
                     <div className="text-center">
 
