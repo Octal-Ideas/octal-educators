@@ -13,6 +13,7 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/common/ScrollToTop";
 import SignUp from "./components/signup-login/Signup";
+import LogIn from "./components/signup-login/login";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/journal" element={<Blogs />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/register" element={<SignUp />} />
+        <Route exact path="/login" element={<LogIn />} />
       </Routes>
       <Footer />
     </>

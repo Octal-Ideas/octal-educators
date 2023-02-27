@@ -20,7 +20,7 @@ const Hero = () => {
               imagined.
             </p>
             <div className="button">
-              <Link to="/register">
+              <Link to="/contact">
                 <button className="primary-btn">
                   GET STARTED NOW <i className="fa fa-long-arrow-alt-right"></i>
                 </button>
