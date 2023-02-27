@@ -9,7 +9,7 @@
   width: 100%;
   height: 100vh;
   padding-top: 20%;
-  padding-right: 50px;
+  padding-right: 10%;
   color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -22,16 +22,31 @@
   margin: 0;
   padding: 0;
 }
+
 @media screen and (max-width: 768px) {
   .margin {
     height: 40vh;
   }
   .hero {
     background-position: right;
-    padding-top: 50%;
+    padding-top: 45%;
     height: 80vh;
+  }
+  .container{
+   width: 100%;
   }
   .hero .row {
     width: 100%;
   }
+  .hero #heading h1{
+    font-size: 2rem;
+  }
+  .hero #heading h3{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  
 }
+
