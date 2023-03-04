@@ -5,6 +5,9 @@ import Input from "./Input";
 import Back from "../common/back/Back";
 import DropDown from "./Select";
 import MultiSelect from "./MultiSelect";
+
+import { useNavigate } from "react-router-dom";
+
 const categoryOptions = [
   { value: "apple", label: "Apple" },
   { value: "banana", label: "Banana" },
@@ -18,6 +21,12 @@ const transformedData = data.map((item) => ({
 }));
 
 function Form({ onAddBlog }) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("add-blog");
+  }
+
   //set value from rich text
   const [value, setValue] = useState("");
 
@@ -128,6 +137,7 @@ function Form({ onAddBlog }) {
             setSelectedOption={setLanguage}
           />
           <div>
+            <button onClick={handleClick}>Go to Add Blog</button>
             <button>Preview</button>
             <button type="submit">Publish</button>
           </div>

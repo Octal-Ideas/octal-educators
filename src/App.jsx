@@ -39,7 +39,7 @@ function App() {
   //add blog
   function handleAddBlog(newBlog) {
     setBlogs([...blogs, newBlog]);
-    console.log(blogs)
+    console.log(blogs);
   }
   return (
     // <>
@@ -63,6 +63,7 @@ function App() {
           exact
           path="/blog/add"
           element={<Form onAddBlog={handleAddBlog} />}
+          name="add-blog"
         />
       </Routes>
       <Footer />
