@@ -39,6 +39,7 @@ function App() {
   //add blog
   function handleAddBlog(newBlog) {
     setBlogs([...blogs, newBlog]);
+    console.log(blogs)
   }
   return (
     // <>
@@ -60,7 +61,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route
           exact
-          path="/addblogs"
+          path="/blog/add"
           element={<Form onAddBlog={handleAddBlog} />}
         />
       </Routes>
