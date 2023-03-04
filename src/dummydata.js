@@ -528,63 +528,63 @@ export const testimonal = [
 // loadBlogData();
 
 
-// async function loadBlogContent(id) {
-//   try {
-//     const response = await fetch(`./blog/blog-content-${id}.md`);
-//     const markdown = await response.text();
-//     return marked(markdown);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-// async function loadBlogData() {
-//   for (let i = 0; i < blog.length; i++) {
-//     const entry = blog[i];
-//     try {
-//       let content = localStorage.getItem(`blog-${entry.id}`);
-//       if (!content) {
-//         content = await loadBlogContent(entry.id);
-//         localStorage.setItem(`blog-${entry.id}`, content);
-//       }
-//       entry.content = content;
-//     } catch (err) {
-//       console.error("An error occurred while loading the blog entry: ", err);
-//     }
-//   }
-// }
-
-// loadBlogData().then(() => console.log(blog));
-
-
-function Blog() {
-  const [blogData, setBlogData] = useState([]);
-
-  useEffect(() => {
-    const loadBlogContent = async (id) => {
-      try {
-        const response = await fetch(`./blog/blog-content-${id}.md`);
-        const markdown = await response.text();
-        return marked(markdown);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    const loadBlogData = async () => {
-      const blogEntries = [...blog];
-      for (let i = 0; i < blogEntries.length; i++) {
-        const entry = blogEntries[i];
-        try {
-          const content = await loadBlogContent(entry.id);
-          entry.content = content;
-        } catch (err) {
-          console.error("An error occurred while loading the blog entry: ", err);
-        }
-      }
-      setBlogData(blogEntries);
-    };
-
-    loadBlogData();
-  }, []);
+async function loadBlogContent(id) {
+  try {
+    const response = await fetch(`./blog/blog-content-${id}.md`);
+    const markdown = await response.text();
+    return marked(markdown);
+  } catch (error) {
+    console.error(error);
+  }
 }
+
+async function loadBlogData() {
+  for (let i = 0; i < blog.length; i++) {
+    const entry = blog[i];
+    try {
+      let content = localStorage.getItem(`blog-${entry.id}`);
+      if (!content) {
+        content = await loadBlogContent(entry.id);
+        localStorage.setItem(`blog-${entry.id}`, content);
+      }
+      entry.content = content;
+    } catch (err) {
+      console.error("An error occurred while loading the blog entry: ", err);
+    }
+  }
+}
+
+loadBlogData().then(() => console.log(blog));
+
+
+// function Blog() {
+//   const [blogData, setBlogData] = useState([]);
+
+//   useEffect(() => {
+//     const loadBlogContent = async (id) => {
+//       try {
+//         const response = await fetch(`./blog/blog-content-${id}.md`);
+//         const markdown = await response.text();
+//         return marked(markdown);
+//       } catch (error) {
+//         console.error(error);
+//       }
+//     };
+
+//     const loadBlogData = async () => {
+//       const blogEntries = [...blog];
+//       for (let i = 0; i < blogEntries.length; i++) {
+//         const entry = blogEntries[i];
+//         try {
+//           const content = await loadBlogContent(entry.id);
+//           entry.content = content;
+//         } catch (err) {
+//           console.error("An error occurred while loading the blog entry: ", err);
+//         }
+//       }
+//       setBlogData(blogEntries);
+//     };
+
+//     loadBlogData();
+//   }, []);
+// }
