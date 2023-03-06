@@ -15,7 +15,11 @@ import Blogs from "./components/blog/Blogs";
 import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/common/ScrollToTop";
+
+import SignUp from "./components/signup-login/Signup";
+import LogIn from "./components/signup-login/login";
 import Form from "./components/forms/Form";
+
 
 function App() {
   // Declaring state variables with useState Hook
@@ -58,12 +62,16 @@ function App() {
         <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/journal" element={<Blogs />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/register" element={<SignUp />} />
+        <Route exact path="/login" element={<LogIn />} />
+
         <Route
           exact
           path="/blog/add"
           element={<Form onAddBlog={handleAddBlog} />}
           name="add-blog"
         />
+
       </Routes>
       <Footer />
     </>

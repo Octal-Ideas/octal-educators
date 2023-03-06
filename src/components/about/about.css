@@ -13,7 +13,7 @@
   object-fit: cover;
 }
 .aboutHome .right {
-  padding: 80px 50px;
+ padding: 5% ;
 }
 .aboutHome .items {
   margin-top: 50px;
@@ -32,7 +32,7 @@
   height: 70px;
 }
 .aboutHome .item h2 {
-  font-size: 20px;
+  font-size: 1rem;
   margin-bottom: 15px;
 }
 .aboutHome .item p {
@@ -63,10 +63,10 @@
   margin-right: 30px;
 }
 .awrapper h1 {
-  font-size: 50px;
+  font-size: 3rem;
 }
 .awrapper h3 {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 500;
 }
 /*----------awrapper------------*/
