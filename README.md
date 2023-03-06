@@ -1,60 +1,40 @@
-# OCTAL IDEAS
+# OCTAL EDUCATORS
 
-# INTRODUCTION
+# By: OCTAL IDEAS
 
-Octal Ideas is a premier institution for learning programming and software development. Our goal is to provide students with the knowledge and skills they need to succeed in the tech industry. We offer a wide range of courses for beginners, intermediate, and advanced learners.
+# Project Description
 
-# COURSES OFFERED 
+This is a school website that enables you to book different available IT courses. The website utilizes the Vite framework to create a seamless user experience.
 
-Our curriculum includes courses on the most in-demand programming languages and technologies. Some of our most popular courses include:
+# Setup/Installation Requirements
 
-Web Development with HTML, CSS, and JavaScript
+Clone the repository from GitHub.
 
-Full Stack Web Development with Node.js and React
+Navigate to the root directory of the project.
 
-Mobile App Development with React Native
+Run npm install to install all the dependencies.
 
-Backend development with Ruby
+Run npm run dev to start the development server.
 
-All of our courses are taught by experienced instructors who are experts in their fields.
+Open your browser and go to localhost:3000 to view the application.
 
-# LEARNING RESOURCES
+# Live Link
+https://octal-educators.vercel.app/
 
-In addition to our courses, we offer a variety of learning resources to help students improve their skills. These include:
+# Bugs
+There are currently no known bugs in the project.
 
-Online tutorials
+# Technologies Used
+React
 
-Coding challenges
+Vite
 
-Video lectures
+Django
 
-Coding workshops
+# Support/Contact Details
 
-# STUDENT SUPPORT
+If you encounter any issues or would like to reach out to the project creator, please feel free to send an email to octalideas@gmail.com
 
-We are committed to providing our students with the support they need to succeed. We offer:
+# License
 
-One-on-one tutoring
-
-Career counseling
-
-Job placement assistance
-
-Networking opportunities
-
-# ADMISSION REQUIREMENTS
-
-To enroll in our courses, students must meet the following requirements:
-
-1. Basic computer skills
-
-2. High school diploma or equivalent
-
-3. Willingness to learn
-
-# CONTACT US
-
-If you have any questions about our courses or would like to speak to an admissions representative, please email us at octalideas@gmail.com or call us at +254 799 444 133. You can also visit our website at https://octal-educators.vercel.app/ . We look forward to hearing from you!
-
-
-
+This project is licensed under the MIT License.
