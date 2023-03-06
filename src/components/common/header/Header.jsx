@@ -36,7 +36,13 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+           
           </ul>
+          <div className="btn-login-signup">
+            <button id="login">Log In</button>
+            <button id="signup">Sign Up</button>
+          </div>
+          
           <div className="start">
             <div className="button">GET CERTIFICATE</div>
           </div>
