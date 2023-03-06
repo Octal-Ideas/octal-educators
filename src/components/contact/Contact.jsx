@@ -1,3 +1,4 @@
+//importing necessary dependencies
 import React, { useRef, useState } from "react";
 import Back from "../common/back/Back";
 import "./contact.css";
@@ -6,16 +7,20 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  //Google Maps API to embed the location
   const map =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8763994536293!2d36.88679511430506!3d-1.2450214359326062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f15ca7016992f%3A0x4b7f89640fb5e285!2sBega%20Kwa%20Bega!5e0!3m2!1sen!2ske!4v1676022392648!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ';
 
+  //Creating a ref to get the form input values
   const form = useRef();
 
+  //Using the useState hook to manage the state of name, email, subject and message fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const[subject, setSubject] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  //Function to send the email using EmailJS on form submission
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -30,10 +35,11 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
-          setName('');
-          setEmail('');
-          setSubject('');
-          setMessage('');
+          //Setting the state of name, email, subject and message fields to an empty string after the message is sent
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
         },
         (error) => {
           console.log(error.text);
@@ -41,14 +47,13 @@ const Contact = () => {
       );
   };
 
-  //Notify Fuction Called when the send button is clicked
+  //Notify function to display the success message using the toast component
   const notify = () => toast.info("Message Sent Successfully!");
 
+  //Function to handle the click of the submit button
   function handleClick() {
     notify();
-    // handleSubmit();
   }
-
   return (
     <>
       <Back title="Contact us" />

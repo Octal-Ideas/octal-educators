@@ -1,11 +1,12 @@
-import React from "react"
-import { awrapper } from "../../dummydata"
+import React from "react";
+import { awrapper } from "../../dummydata";
 
+// This component renders a grid of boxes containing an image and text, using data from the dummydata file.
 const Awrapper = () => {
   return (
     <>
-      <section className='awrapper'>
-        <div className='container grid'>
+      <section className="awrapper">
+        <div className="container grid">
           {awrapper.map((val) => {
             return (
               <div className="box flex" key={val.id}>
@@ -22,7 +23,7 @@ const Awrapper = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Awrapper
+export default Awrapper;

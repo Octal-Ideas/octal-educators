@@ -18,10 +18,13 @@ const Blog = () => {
   // Render the blog post and a back button with the blog title and cover image
   return (
     <>
+      {/* Render the back button with the blog title and cover image */}
       <Back title={eachBlog.title} bgImage={eachBlog.cover} />
+
       <section className="blog padding">
         <div className="container">
-          <div dangerouslySetInnerHTML={{ __html: eachBlog.content }} />{" "}
+          {/* Render the blog content using dangerouslySetInnerHTML, which is used for inserting HTML content */}
+          <div dangerouslySetInnerHTML={{ __html: eachBlog.content }} />
         </div>
       </section>
     </>
@@ -29,3 +32,8 @@ const Blog = () => {
 };
 
 export default Blog;
+
+
+
+
+

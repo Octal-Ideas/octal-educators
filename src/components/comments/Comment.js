@@ -1,19 +1,23 @@
 import CommentCSS from "./Comment.module.css";
 import React, { useState } from "react";
-// import CommentCard from "./CommentCard";
 import Input from "../forms/Input";
-import Comments from "../comments/Comments"
+import Comments from "../comments/Comments";
 
-function Comment( eachBlog ) {
+function Comment(eachBlog) {
   console.log("blogs lastly", eachBlog);
 
+  // State for input fields
   const [input, setInput] = useState({
     comment: "",
   });
+
+  // Handler for input changes
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
+
+  // Handler for form submission
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (input.comment != null && input.comment.trim() !== "") {
@@ -22,8 +26,9 @@ function Comment( eachBlog ) {
       console.log("Error");
     }
   };
+
   return (
-    // is not same as the one on the design because it imports styles from the input component
+    // Form for adding comments
     <>
       <form onSubmit={handleOnSubmit} className={CommentCSS.form}>
         <Input
@@ -40,10 +45,12 @@ function Comment( eachBlog ) {
         </div>
       </form>
 
+      {/* Component for displaying comments */}
       <div className={CommentCSS.form}>
-        <Comments eachBlog={eachBlog}/>
+        <Comments eachBlog={eachBlog} />
       </div>
     </>
   );
 }
+
 export default Comment;

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Head from "./Head";
-import "./header.css";
+import Head from "./Head"; // importing the Head component
+import "./header.css"; // importing the styles for this component
 
 const Header = () => {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false); // creating a state to handle the mobile navigation menu
 
   return (
     <>
-      <Head />
+      <Head /> {/* rendering the Head component */}
       <header>
         <nav className="flexSB">
+          {/* The navigation menu */}
           <ul
             className={click ? "mobile-nav" : "flexSB "}
             onClick={() => setClick(false)}
@@ -37,9 +38,11 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
+          {/* The "Get Certificate" button */}
           <div className="start">
             <div className="button">GET CERTIFICATE</div>
           </div>
+          {/* The toggle button for the mobile navigation menu */}
           <button className="toggle" onClick={() => setClick(!click)}>
             {click ? (
               <i className="fa fa-times"> </i>
