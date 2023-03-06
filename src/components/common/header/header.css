@@ -47,6 +47,23 @@ header ul li a:hover {
   color: #fff;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
 }
+.btn-login-signup{
+  display: flex ;
+  align-items: center;
+}
+.btn-login-signup #login,#signup{
+  margin: 1rem;
+  border-radius: .5rem;
+}
+.btn-login-signup #signup{
+  background-color: var(--primary);
+  color: #fff;
+}
+.btn-login-signup #signup:hover{
+  background-color: hsl(0, 0%, 100%) ;
+  color: var(--primary);
+}
+
 .toggle {
   display: none;
 }
