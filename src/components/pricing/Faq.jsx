@@ -16,11 +16,12 @@ const Faq = () => {
 
   return (
     <>
-      <Heading subtitle="FAQS" title="Frequently Asked Questions" /> // render
-      the Heading component with props
+      <Heading subtitle="FAQS" title="Frequently Asked Questions" />
+      {/*  render
+      the Heading component with props*/}
       <section className="faq">
         {" "}
-        // FAQ section
+        {/*  FAQ section */}
         <div className="container">
           {faq.map(
             (
@@ -29,13 +30,13 @@ const Faq = () => {
             ) => (
               <div className="box" key={val.id}>
                 {" "}
-                // create a box for each question
+                {/* // create a box for each question */}
                 <button
                   className="accordion"
                   onClick={() => toggle(index)} // handle click event and pass the index
                   key={index} // set key to index
                 >
-                  <h2>{val.title}</h2> // render question title
+                  <h2>{val.title}</h2>{/* render question title */}
                   <span>
                     {click === index ? ( // render arrow icon depending on whether the question is open or not
                       <i className="fa fa-chevron-down"></i>

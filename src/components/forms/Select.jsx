@@ -4,7 +4,7 @@
 // - setSelectedOption: a function that updates the selected option, passed as a prop from the parent component
 // - options: an array of objects representing the options to be displayed in the dropdown menu, passed as a prop from the parent component.
 
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
 
 const DropDown = ({ selectedOption, setSelectedOption, options }) => {

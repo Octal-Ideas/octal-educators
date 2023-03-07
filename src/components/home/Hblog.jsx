@@ -17,7 +17,7 @@ const Hblog = () => {
               ) => (
                 <div className="items shadow" key={val.id}>
                   {" "}
-                  // Adding a key prop to the div element
+                  {/* // Adding a key prop to the div element */}
                   <div className="img">
                     <img src={val.cover} alt="" />
                   </div>

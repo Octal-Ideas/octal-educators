@@ -10,12 +10,12 @@ const Home = () => {
   // Render function
   return (
     <>
-      <Hero /> // Render Hero component
-      <AboutCard /> // Render AboutCard component
-      <HAbout /> // Render HAbout component
-      <Testimonial /> // Render Testimonial component
-      <Hblog /> // Render Hblog component
-      <Hprice /> // Render Hprice component
+      <Hero /> {/* Render Hero component */}
+      <AboutCard /> {/* Render AboutCard component*/}
+      <HAbout /> {/* Render HAbout component*/}
+      <Testimonial /> {/* Render Testimonial component*/}
+      <Hblog /> {/* Render Hblog component*/}
+      <Hprice /> {/* Render Hprice component*/}
     </>
   );
 };
