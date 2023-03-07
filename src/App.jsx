@@ -16,7 +16,7 @@ import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/common/ScrollToTop";
 
 import SignUp from "./components/signup-login/Signup";
-import LogIn from "./components/signup-login/login";
+import Login from "./components/signup-login/Login";
 import Form from "./components/forms/Form";
 
 
@@ -63,7 +63,7 @@ function App() {
         <Route exact path="/journal" element={<Blogs />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/register" element={<SignUp />} />
-        <Route exact path="/login" element={<LogIn />} />
+        <Route exact path="/login" element={<Login />} />
 
         <Route
           exact
