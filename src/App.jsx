@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import "./App.css";
 
@@ -18,8 +18,7 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import SignUp from "./components/signup-login/Signup";
 import LogIn from "./components/signup-login/login";
 import Form from "./components/forms/Form";
-
-
+import NotFound from "./components/error/NotFound";
 function App() {
   //states
   const [blogs, setBlogs] = useState([]);
@@ -65,14 +64,14 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/register" element={<SignUp />} />
         <Route exact path="/login" element={<LogIn />} />
-
         <Route
           exact
           path="/blog/add"
           element={<Form onAddBlog={handleAddBlog} />}
           name="add-blog"
         />
-
+        {/* Add the new NotFound route */}
+        <Route path="*" element={<NotFound />} /> 
       </Routes>
       <Footer />
     </>
