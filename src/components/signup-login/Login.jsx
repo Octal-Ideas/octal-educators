@@ -1,41 +1,65 @@
-
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
-
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-
     } catch (error) {
       setError(error.message);
     }
   };
 
+  const handleInputChange = (e) => {
+    const input = e.target;
+    if (input.value) {
+      input.classList.add("has-value");
+    } else {
+      input.classList.remove("has-value");
+    }
+  };
+
   return (
-    <div className='cover'>
+    <div className="cover">
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
-        <div className='inputBox'>
-          {/* <label>Email:</label> */}
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="inputBox">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              handleInputChange(e);
+            }}
+            required
+          />
           <span>Email</span>
         </div>
-        <div className='inputBox'>
-          {/* <label>Password:</label> */}
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <div className="inputBox">
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              handleInputChange(e);
+            }}
+            required
+          />
           <span>Password</span>
         </div>
-        <button type="submit" id='btn-login'>Login</button>
+        <button type="submit" id="btn-login">
+          Login
+        </button>
         <div>{error}</div>
       </form>
-      <p>Don't have an account? <Link to="/register">Sign up</Link></p>
+      <p>
+        Don't have an account? <Link to="/register">Sign up</Link>
+      </p>
       <p>Or Log In Using</p>
 
       <div className="alt-login">
