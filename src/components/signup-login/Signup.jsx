@@ -39,6 +39,7 @@ function Signup() {
                 setFirstName(e.target.value);
                 handleInputChange(e);
               }}
+              required
             />
             <span>First Name</span>
           </div>
@@ -50,6 +51,7 @@ function Signup() {
                 setLastName(e.target.value);
                 handleInputChange(e);
               }}
+              required
             />
             <span>Last Name</span>
           </div>
@@ -63,6 +65,7 @@ function Signup() {
               setEmail(e.target.value);
               handleInputChange(e);
             }}
+            required
           />
           <span>Email</span>
         </div>
@@ -75,6 +78,7 @@ function Signup() {
               setPassword(e.target.value);
               handleInputChange(e);
             }}
+            required
           />
           <span>Password</span>
         </div>
