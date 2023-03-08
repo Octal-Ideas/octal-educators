@@ -1,0 +1,84 @@
+
+.cover {
+    background-color: white;
+    width: 40em;
+    height: 30em;
+    position: relative;
+    /* margin: 3em 1em 3em 35em; */
+    margin: 5%;
+    padding: 1rem;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em rgb(10,156,156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.cover form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.cover .inputBox{
+    position: relative;
+    width: 30em;
+    height: 46px;
+    margin-bottom: 35px;
+}
+.cover .inputBox:last-child{
+    margin-bottom: 0;
+}
+.cover .inputBox input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    background-color: rgb(229, 226, 226);
+    padding: 1em;
+    border-radius: .3em;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1em;
+    color: #111;
+    font-weight: 300;
+}
+.cover .inputBox span {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    /* padding: 1em; */
+    display: inline-block;
+    font-size: 1em;
+    color: #111;
+    font-weight: 300;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.cover .inputBox input:focus ~ span,
+.cover .inputBox input:focus ~ span {
+    transform: translateX(-10px) translateY(-32px);
+    font-size: 12px;
+}
+#btn-login {
+    width: 20em;
+}
+/* input {
+    border: none;
+    background-color: rgb(229, 226, 226);
+    height: 4em;
+    width: 100%;
+    border-radius: 0.25em;
+    padding: 2em;
+    margin: 1em;
+} */
+
+.alt-login {
+    width: 80%;
+    height: 3em;
+    display: flex;
+    justify-content: space-around;
+}
