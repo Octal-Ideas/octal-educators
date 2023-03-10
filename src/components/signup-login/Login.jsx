@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
+  //Declear login variables an initialize it to an empty state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  //Handles login logics
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
@@ -15,6 +17,7 @@ function Login() {
     }
   };
 
+  //function to handle inputs if has value or not
   const handleInputChange = (e) => {
     const input = e.target;
     if (input.value) {
@@ -25,6 +28,7 @@ function Login() {
   };
 
   return (
+    //Log in form component
     <div className="cover">
       <h1>Login</h1>
       <form onSubmit={handleLogin}>

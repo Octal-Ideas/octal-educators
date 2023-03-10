@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Signup() {
+  //Declear signup variables an initialize it to an empty state
   const [fname, setFirstName] = useState("");
   const [lname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  //Function to Handles Register logics
   const handleRegister = async (event) => {
     event.preventDefault();
     try {
@@ -17,6 +19,7 @@ function Signup() {
     }
   };
 
+  //Function to handle inputs if it has value or not
   const handleInputChange = (e) => {
     const input = e.target;
     if (input.value) {
@@ -88,7 +91,7 @@ function Signup() {
         <div>{error}</div>
       </form>
       <p>
-        Already have an account? <Link to="/login">Log In</Link>
+        Already have an account? <span className = "reghere"><Link to="/login">Log In</Link></span>
       </p>
       <p>Or Log In Using</p>
 
