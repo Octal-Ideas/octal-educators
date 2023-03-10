@@ -18,7 +18,9 @@ To run Octal Educators on your local machine, follow these steps:
 
 ## Live Link
 
-Check out our live website at https://octal-educators.vercel.app/ and start exploring our courses today!
+Check out our live website at https://octal-educators.vercel.app/ &
+https://octal-educators.netlify.app/
+ and start exploring our courses today!
 
 ## Technologies Used
 
