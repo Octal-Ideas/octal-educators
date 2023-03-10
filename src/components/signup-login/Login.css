@@ -1,6 +1,6 @@
 .cover {
     background-color: white;
-    width: 90%;
+    width: 50%;
     height: auto;
     position: relative;
     margin: 5%;
@@ -81,11 +81,15 @@
     transform: translateX(-10px) translateY(-32px);
     font-size: 12px;
   }
+  .reghere {
+    color: var(--primary);
+  }
   
   #btn-login {
     width: 80%;
     font-weight: 300;
     margin-bottom: 5%;
+    font-size: 1.5rem;
   }
   
   .alt-login {

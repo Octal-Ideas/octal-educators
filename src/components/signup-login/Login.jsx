@@ -57,8 +57,8 @@ function Login() {
         </button>
         <div>{error}</div>
       </form>
-      <p>
-        Don't have an account? <Link to="/register">Sign up</Link>
+      <p >
+        Don't have an account? <span className = "reghere"><Link to="/register">Register Here</Link></span> 
       </p>
       <p>Or Log In Using</p>
 
