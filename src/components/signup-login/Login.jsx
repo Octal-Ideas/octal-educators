@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
-function Signup() {
-  //Declear signup variables an initialize it to an empty state
-  const [fname, setFirstName] = useState("");
-  const [lname, setLastName] = useState("");
+function Login() {
+  //Declear login variables an initialize it to an empty state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  //Function to Handles Register logics
-  const handleRegister = async (event) => {
+  //Handles login logics
+  const handleLogin = async (event) => {
     event.preventDefault();
     try {
     } catch (error) {
@@ -19,7 +17,7 @@ function Signup() {
     }
   };
 
-  //Function to handle inputs if it has value or not
+  //function to handle inputs if has value or not
   const handleInputChange = (e) => {
     const input = e.target;
     if (input.value) {
@@ -30,37 +28,11 @@ function Signup() {
   };
 
   return (
+    //Log in form component
     <div className="cover">
-      <h1>Register</h1>
-      <form onSubmit={handleRegister}>
-        <div className="names">
-          <div className="inputBox">
-            <input
-              type="text"
-              value={fname}
-              onChange={(e) => {
-                setFirstName(e.target.value);
-                handleInputChange(e);
-              }}
-              required
-            />
-            <span>First Name</span>
-          </div>
-          <div className="inputBox">
-            <input
-              type="text"
-              value={lname}
-              onChange={(e) => {
-                setLastName(e.target.value);
-                handleInputChange(e);
-              }}
-              required
-            />
-            <span>Last Name</span>
-          </div>
-        </div>
+      <h1>Login</h1>
+      <form onSubmit={handleLogin}>
         <div className="inputBox">
-          
           <input
             type="email"
             value={email}
@@ -73,7 +45,6 @@ function Signup() {
           <span>Email</span>
         </div>
         <div className="inputBox">
-          
           <input
             type="password"
             value={password}
@@ -86,12 +57,12 @@ function Signup() {
           <span>Password</span>
         </div>
         <button type="submit" id="btn-login">
-          Regiter
+          Login
         </button>
         <div>{error}</div>
       </form>
-      <p>
-        Already have an account? <span className = "reghere"><Link to="/login">Log In</Link></span>
+      <p >
+        Don't have an account? <span className = "reghere"><Link to="/register">Register Here</Link></span> 
       </p>
       <p>Or Log In Using</p>
 
@@ -113,4 +84,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;
