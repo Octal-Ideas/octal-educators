@@ -1,10 +1,8 @@
 import React from "react";
 import "../blog/blog.css";
-import { blog } from "../../dummydata";
+import { blog } from "../../dummydata"; // Importing dummy data
 import Heading from "../common/heading/Heading";
 import { Link } from "react-router-dom";
-
-// copy code of blog => blogCard
 
 const Hblog = () => {
   return (
@@ -13,33 +11,39 @@ const Hblog = () => {
         <div className="container">
           <Heading subtitle="OUR BLOG" title="Recent From Blog" />
           <div className="grid2">
-            {blog.slice(0, 3).map((val) => (
-              <div className="items shadow" key={val.id}>
-                <div className="img">
-                  <img src={val.cover} alt="" />
-                </div>
-                <div className="text">
-                  <div className="admin flexSB">
-                    <span>
-                      <i className="fa fa-user"></i>
-                      <label htmlFor="">{val.type}</label>
-                    </span>
-                    <span>
-                      <i className="fa fa-calendar-alt"></i>
-                      <label htmlFor="">{val.date}</label>
-                    </span>
-                    <span>
-                      <i className="fa fa-comments"></i>
-                      <label htmlFor="">{val.com}</label>
-                    </span>
+            {blog.slice(0, 3).map(
+              (
+                val // Using the map method to iterate over the first three items of the blog array
+              ) => (
+                <div className="items shadow" key={val.id}>
+                  {" "}
+                  {/* // Adding a key prop to the div element */}
+                  <div className="img">
+                    <img src={val.cover} alt="" />
                   </div>
-                  <Link to={`/blog/${val.id}`}>
-                    <h1>{val.title}</h1>
-                  </Link>
-                  <p>{val.desc}</p>
+                  <div className="text">
+                    <div className="admin flexSB">
+                      <span>
+                        <i className="fa fa-user"></i>
+                        <label htmlFor="">{val.type}</label>
+                      </span>
+                      <span>
+                        <i className="fa fa-calendar-alt"></i>
+                        <label htmlFor="">{val.date}</label>
+                      </span>
+                      <span>
+                        <i className="fa fa-comments"></i>
+                        <label htmlFor="">{val.com}</label>
+                      </span>
+                    </div>
+                    <Link to={`/blog/${val.id}`}>
+                      <h1>{val.title}</h1>
+                    </Link>
+                    <p>{val.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </section>

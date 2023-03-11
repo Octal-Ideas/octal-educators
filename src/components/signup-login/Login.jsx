@@ -1,34 +1,36 @@
+// Importing necessary modules and styles
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-  //Declear login variables an initialize it to an empty state
+  // Declearing state variables and initialize them to empty values
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  //Handles login logics
+  // Handles login logic
   const handleLogin = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevents form from submitting
     try {
+      // Handle login logic here
     } catch (error) {
-      setError(error.message);
+      setError(error.message); // Sets error message if an error occurs
     }
   };
 
-  //function to handle inputs if has value or not
+  // Function to handle input changes and add/remove CSS class accordingly
   const handleInputChange = (e) => {
     const input = e.target;
     if (input.value) {
-      input.classList.add("has-value");
+      input.classList.add("has-value"); // Adds class if input has value
     } else {
-      input.classList.remove("has-value");
+      input.classList.remove("has-value"); // Removes class if input has no value
     }
   };
 
+  // Render login form component
   return (
-    //Log in form component
     <div className="cover">
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
@@ -61,8 +63,11 @@ function Login() {
         </button>
         <div>{error}</div>
       </form>
-      <p >
-        Don't have an account? <span className = "reghere"><Link to="/register">Register Here</Link></span> 
+      <p>
+        Don't have an account?{" "}
+        <span className="reghere">
+          <Link to="/register">Register Here</Link>
+        </span>
       </p>
       <p>Or Log In Using</p>
 

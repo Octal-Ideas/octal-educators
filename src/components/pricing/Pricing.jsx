@@ -7,13 +7,13 @@ import Faq from "./Faq";
 const Pricing = () => {
   return (
     <>
-      <Back title="Choose The Right Plan" />
+      <Back title="Choose The Right Plan" /> {/* Back component with a title */}
       <section className="price padding">
         <div className="container grid">
-          <PriceCard />
+          <PriceCard /> {/* PriceCard component */}
         </div>
       </section>
-      <Faq />
+      <Faq /> {/* Faq component */}
     </>
   );
 };
