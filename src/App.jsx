@@ -1,6 +1,6 @@
 // Importing necessary modules and components
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -16,10 +16,9 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import ScrollToTop from "./components/common/ScrollToTop";
 
-import SignUp from "./components/signup-login/Signup";
-import Login from "./components/signup-login/Login";
-import Form from "./components/forms/Form";
+import Register from "./components/signup-login/Register";
 
+import Form from "./components/forms/Form";
 
 function App() {
   // Declaring state variables with useState Hook
@@ -62,8 +61,7 @@ function App() {
         <Route exact path="/pricing" element={<Pricing />} />
         <Route exact path="/journal" element={<Blogs />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/register" element={<SignUp />} />
-        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
 
         <Route
           exact
@@ -71,7 +69,6 @@ function App() {
           element={<Form onAddBlog={handleAddBlog} />}
           name="add-blog"
         />
-
       </Routes>
       <Footer />
     </>
