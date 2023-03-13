@@ -7,7 +7,7 @@ const Header = () => {
   const [click, setClick] = useState(false); // creating a state to handle the mobile navigation menu
 
   return (
-    <>
+    <div className="bgColor">
       <Head /> {/* rendering the Head component */}
       <header>
         <nav className="flexSB">
@@ -37,23 +37,16 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-
           </ul>
 
           {/* The "Get Certificate" button */}
 
           <div className="btn-login-signup">
 
-            <Link to="/login">
-              <button id="login">Log In</button>
-            </Link>
-
             <Link to="/register">
-            <button id="signup">Register</button>
+              <button id="signup">Register</button>
             </Link>
-
           </div>
-
 
           <div className="start">
             <div className="button">GET CERTIFICATE</div>
@@ -68,7 +61,7 @@ const Header = () => {
           </button>
         </nav>
       </header>
-    </>
+    </div>
   );
 };
 
